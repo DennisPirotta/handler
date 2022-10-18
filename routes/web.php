@@ -45,6 +45,8 @@ Route::middleware('auth')->group(callback: static function (){
 
     Route::get('/profile',[UserController::class,'index'])->name('users.index');
 
+    Route::put('/profile/{user}',[UserController::class,'updateIcon'])->name('user.icon.update');
+
 
 });
 

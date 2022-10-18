@@ -11,7 +11,7 @@ class Transaction extends Model
     use HasFactory;
 
     protected $fillable = [
-        'price', 'payed', 'customer_id', 'user_id', 'type', 'date'
+        'price', 'payed', 'customer_id', 'user_id', 'type', 'date','note'
     ];
 
     public function scopeFilter($query, array $filters): void

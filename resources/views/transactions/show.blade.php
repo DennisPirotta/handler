@@ -15,7 +15,7 @@
     </div>
     <div class="container shadow-sm p-3 bg-dark">
         <h4 class="mt-4 mb-3 text-opacity-50 text-white">
-            {{ $transaction->customer->name }}
+            {{ $transaction->customer->name ?? $transaction->note ?? 'Anonimo' }}
         </h4>
         <h3 class="text-white mb-3">{{$transaction->type === 0 ? '+' : '-'}} {{ $transaction->price }} <i
                     class="bi bi-currency-euro"></i></h3>

@@ -7,7 +7,7 @@
             <i class="bi bi-exclamation-triangle text-danger fs-5 me-2"></i>
         @endif
         <div class="row ps-1">
-            <div class="col-12">{{ $transaction->customer->name }}</div>
+            <div class="col-12">{{ $transaction->customer->name ?? $transaction->note ?? 'Anonimo' }}</div>
             <small class="col-12 text-secondary"
                    style="font-size: 0.8rem">{{ Carbon::parse($transaction->date)->format('H:i') }}</small>
         </div>

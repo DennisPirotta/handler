@@ -39,13 +39,27 @@
                     <h5 class="modal-title text-white-50" id="addLabel">Aggiungi</h5>
                     <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <form method="post" action="{{ route('transactions.store') }}">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="form-outline form-white mb-3">
+                            <input type="text" id="note" name="note" class="form-control" />
+                            <label class="form-label" for="note">Note</label>
+                        </div>
+                        <div class="form-outline form-white">
+                            <input type="number" id="price" name="price" class="form-control" />
+                            <label class="form-label" for="price">Prezzo</label>
+                        </div>
 
-                </div>
-                <div class="modal-footer border-darker">
-                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                        <input type="hidden" name="date" value="{{ \Carbon\Carbon::now() }}">
+                        <input type="hidden" name="type" value="0">
+                        <input type="hidden" name="payed" value="1">
+
+                    </div>
+                    <div class="modal-footer border-darker">
+                        <button type="submit" class="btn btn-dark bg-darker">{{__('Save')}}</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -53,6 +67,9 @@
     <script>
         $(() => {
             $('#hidden_cash').html('&#9898;&#9898;&#9898;&#9898;&#9898;')
+            document.querySelectorAll('.form-outline').forEach((formOutline) => {
+                new mdb.Input(formOutline).update();
+            });
         })
         $('#eye').click((e) => {
             let target = $(e.target)

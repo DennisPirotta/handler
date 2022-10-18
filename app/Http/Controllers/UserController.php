@@ -12,4 +12,10 @@ class UserController extends Controller
             'user' => User::find(auth()->id())
         ]);
     }
+
+    public function updateIcon(Request $request,User $user){
+        $user->avatar = $request['icon'];
+        $user->save();
+        return back();
+    }
 }

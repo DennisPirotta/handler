@@ -9,7 +9,7 @@
                             aria-controls="flush-collapseOneX"
                     >
                         <i class="bi bi-plus-circle me-2"></i>
-                        Aggiungi
+                        Aggiungi cliente
                     </button>
                 </h2>
                 <div id="flush-collapseOneX" class="accordion-collapse collapse"
