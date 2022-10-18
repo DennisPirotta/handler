@@ -15,13 +15,18 @@
 
     <!-- Scripts -->
     @vite('resources/js/app.js')
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
 </head>
 <body class="bg-dark">
-<script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
-    <div id="app">
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-    </body>
+@if(url()->current() !== route('login') && url()->current() !== route('register'))
+    <x-navbar></x-navbar>
+@endif
+@yield('content')
+</body>
 </html>

@@ -1,23 +1,75 @@
 @extends('layouts.app')
-
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+    {{-- <x-toast :message="'Hello world! This is a toast message.'" :icon="'fa-info-circle'"></x-toast> --}}
+    <div class="container p-3 bg-dark">
+        <h6 class="mt-1 mb-2 text-opacity-25 text-white">Disponibilità</h6>
+        <div class="card text-white bg-darker">
+            <div class="card-body row">
+                <div class="col-8 d-flex align-items-center">
+                    <span class="m-0 h2" id="cash">{{ $cash }}</span>
+                    <span class="m-0 h6 d-none" id="hidden_cash"></span>
+                    <i class="bi bi-currency-euro fs-4"></i>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <i class="bi bi-eye mx-auto fs-4 text-primary" id="eye" style="cursor: pointer"></i>
+                    <button class="btn btn-white bg-white p-2 btn-floating" data-mdb-toggle="modal" data-mdb-target="#add"><i class="bi bi-plus-lg text-primary fs-6"></i> </button>
+                </div>
+            </div>
+        </div>
+        <h6 class="mt-4 mb-2 text-opacity-25 text-white">Movimenti</h6>
+        <div class="card bg-darker">
+            <ul class="list-group">
+                @foreach($latest as $transaction)
+                    <li class="list-group-item p-3 text-white bg-darker">
+                        <x-transaction-card :transaction="$transaction" :islist="true"></x-transaction-card>
+                    </li>
+                @endforeach
+                <li class="list-group-item p-2 text-white text-center bg-darker">
+                    <a class="text-primary fw-bold" href="{{ route('transactions.index') }}">Vedi Tutti</a>
+                </li>
+            </ul>
+        </div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    </div>
 
-                    {{ __('You are logged in!') }}
+    <div class="modal fade" id="add" tabindex="-1" aria-labelledby="addLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-darker">
+                    <h5 class="modal-title text-white-50" id="addLabel">Aggiungi</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer border-darker">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <script>
+        $(() => {
+            $('#hidden_cash').html('&#9898;&#9898;&#9898;&#9898;&#9898;')
+        })
+        $('#eye').click((e) => {
+            let target = $(e.target)
+            let cash = $('#cash')
+            let hidden = $('#hidden_cash')
+            if (target.hasClass('bi-eye')){
+                target.removeClass('bi-eye')
+                target.addClass('bi-eye-slash')
+                cash.addClass('d-none')
+                hidden.removeClass('d-none')
+            }
+            else {
+                target.addClass('bi-eye')
+                target.removeClass('bi-eye-slash')
+                cash.removeClass('d-none')
+                hidden.addClass('d-none')
+            }
+        })
+    </script>
 @endsection
