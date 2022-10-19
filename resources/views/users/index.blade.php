@@ -4,7 +4,7 @@
     <div class="container p-5 bg-dark justify-content-center text-center mb-4">
         <div class="d-flex justify-content-center">
             <button class="my-3 bg-darker position-relative border-0" style="width: 8rem;height: 8rem;border-radius: 4rem;cursor:pointer;" id="user-icon" data-mdb-toggle="modal" data-mdb-target="#icons">
-                <img class="position-absolute top-50 start-50 translate-middle" width="64" src="{{ asset('/images/icons/' . $user->avatar) }}" alt="Avatar">
+                <img class="position-absolute top-50 start-50 translate-middle" width="64" src="{{ asset('/images/avatar/' . $user->avatar) }}" alt="Avatar">
                 <i class="position-absolute top-50 start-50 translate-middle bi bi-pencil-fill display-4 text-black d-none"></i>
             </button>
         </div>
@@ -46,11 +46,11 @@
                     @method('PUT')
                     <div class="modal-body">
                         <div class="btn-group row g-3 shadow-0">
-                            @foreach(scandir('images/icons') as $file)
-                                @if(is_file('images/icons/'.$file))
+                            @foreach(scandir('images/avatar') as $file)
+                                @if(is_file('images/avatar/'.$file))
                                     <div class="col d-flex justify-content-center">
                                         <input type="radio" class="btn-check" name="icon" id="icon_{{ $file }}" value="{{$file}}" autocomplete="off" @if($user->avatar === $file) checked @endif />
-                                        <label class="btn btn-dark mx-auto" for="icon_{{ $file }}"><img class="icon" src="{{ asset('images/icons/'.$file) }}" alt="{{ $file }}" width="100"></label>
+                                        <label class="btn btn-dark mx-auto" for="icon_{{ $file }}"><img class="icon" src="{{ asset('images/avatar/'.$file) }}" alt="{{ $file }}" width="100"></label>
                                     </div>
                                 @endif
                             @endforeach

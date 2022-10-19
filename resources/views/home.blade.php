@@ -88,5 +88,6 @@
                 hidden.addClass('d-none')
             }
         })
+
     </script>
 @endsection

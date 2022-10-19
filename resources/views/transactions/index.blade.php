@@ -4,7 +4,6 @@
 @endphp
 @extends('layouts.app')
 @section('content')
-    @vite(['resources/sass/dropdown.scss','resources/js/dropdown.js'])
     {{-- <x-toast :message="'Hello world! This is a toast message.'" :icon="'fa-info-circle'"></x-toast> --}}
     <div class="container shadow-sm p-3 bg-dark">
 
@@ -134,6 +133,14 @@
                                     <input type="number" id="price" name="price" value=""
                                            class="form-control bg-dark text-white"/>
                                     <label class="form-label text-white" for="price">Price</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <div class="form-outline">
+                                    <input type="text" id="note" name="note"
+                                           class="form-control bg-dark text-white"/>
+                                    <label class="form-label text-white" for="note">Note</label>
                                 </div>
                             </div>
                             <div class="col-12 mb-3">

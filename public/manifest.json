@@ -1,0 +1,99 @@
+{
+  "short_name": "Handler",
+  "name": "handler",
+  "lang": "it",
+  "description": "Gestisci facilmente i tuoi movimenti e monitora la disponibilità",
+  "start_url": "/",
+  "background_color": "#212529",
+  "theme_color": "#212529",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/images/icons/icon_x48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "scope": "any"
+    },
+    {
+      "src": "/images/icons/icon_x48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "scope": "maskable"
+    },
+    {
+      "src": "/images/icons/icon_x72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "scope": "any"
+    },
+    {
+      "src": "/images/icons/icon_x72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "scope": "maskable"
+    },
+    {
+      "src": "/images/icons/icon_x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "scope": "any"
+    },
+    {
+      "src": "/images/icons/icon_x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "scope": "maskable"
+    },
+    {
+      "src": "/images/icons/icon_x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "scope": "any"
+    },
+    {
+      "src": "/images/icons/icon_x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "scope": "maskable"
+    },
+    {
+      "src": "/images/icons/icon_x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "scope": "any"
+    },
+    {
+      "src": "/images/icons/icon_x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "scope": "maskable"
+    },
+    {
+      "src": "/images/icons/icon_x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "scope": "any"
+    },
+    {
+      "src": "/images/icons/icon_x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "scope": "maskable"
+    },
+    {
+      "src": "/images/icons/icon_x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "scope": "any"
+    },
+    {
+      "src": "/images/icons/icon_x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "scope": "maskable"
+    }
+  ],
+  "prefer_related_applications": false
+}

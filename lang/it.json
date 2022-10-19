@@ -895,5 +895,9 @@
   "url": "Il formato del campo :attribute non è valido.",
   "user": "Non riusciamo a trovare un utente con questo indirizzo email.",
   "uuid": ":Attribute deve essere un UUID valido.",
-  "now": "adesso"
+  "now": "adesso",
+  "Sign in": "Accedi",
+  "Sign up": "Registrati",
+  "Not a member?": "Non sei iscritto?",
+  "Already a member?": "Sei già iscritto?"
 }

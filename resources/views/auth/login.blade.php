@@ -12,7 +12,7 @@
                     <!-- Email input -->
                     <div class="form-outline form-white mb-3">
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="username">
-                        <label class="form-label" for="name">Name</label>
+                        <label class="form-label" for="name">{{ __('Name') }}</label>
                     </div>
 
                     <!-- Password input -->
@@ -36,16 +36,16 @@
 
                         <div class="col-md-6 d-flex justify-content-center">
                             <!-- Simple link -->
-                            <a href="{{ route('password.request') }}">Forgot password?</a>
+                            <a href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
                         </div>
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                    <button type="submit" class="btn btn-primary btn-block mb-4">{{ __('Sign in') }}</button>
 
                     <!-- Register buttons -->
                     <div class="text-center">
-                        <p>Not a member? <a href="{{ route('register') }}">Register</a></p>
+                        <p>{{ __('Not a member?') }} <a href="{{ route('register') }}">{{ __('Register') }}</a></p>
                     </div>
                 </form>
             </div>

@@ -47,7 +47,9 @@ Route::middleware('auth')->group(callback: static function (){
 
     Route::put('/profile/{user}',[UserController::class,'updateIcon'])->name('user.icon.update');
 
+    Route::put('/customers/update/{customer}',[CustomerController::class,'update'])->name('customers.update');
 
+    Route::delete('/customers/destroy/{customer}',[CustomerController::class,'destroy'])->name('customers.destroy');
 });
 
 

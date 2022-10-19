@@ -1,6 +1,6 @@
 <!-- Just an image -->
-<nav class="navbar-dark fixed-bottom shadow-6">
-    <div class="container  bg-darker">
+<nav class="navbar-dark fixed-bottom shadow-6 bg-darker">
+    <div class="container">
         <div class="navbar-nav d-flex">
             <div class="row">
                 <x-navbar-item :redirect="route('home')" :icon="'bi-house'" :title="'Home'"></x-navbar-item>

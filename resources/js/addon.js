@@ -1,3 +1,15 @@
+/*
+ *  |-------------------------|
+ *  |       Animate CSS       |
+ *  |-------------------------|
+ */
+import 'animate.css'
+/*
+ *  |-------------------------|
+ *  |       Dropdown          |
+ *  |-------------------------|
+ */
+import '../sass/dropdown.scss'
 /*Dropdown Menu*/
 $('.dropdown').click(function () {
     $(this).attr('tabindex', 1).focus();
