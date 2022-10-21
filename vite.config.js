@@ -6,9 +6,9 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/js/app.js',
-                'resources/js/animate.js',
-                'resources/js/dropdown.js',
+                'resources/js/addon.js',
                 'resources/js/lottie-player.js',
+                'resources/js/lottie-web.js',
                 'resources/js/mdb.js'
             ],
             refresh: true,
