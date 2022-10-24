@@ -25,7 +25,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus,
 select:-webkit-autofill:active,
-
+.form-outline .form-control:focus,
 {
   -webkit-text-fill-color: white !important;
   -webkit-box-shadow: 0 0 0 1000px #332d2d inset !important;

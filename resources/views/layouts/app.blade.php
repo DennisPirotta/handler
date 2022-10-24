@@ -22,22 +22,22 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-    <script>
-        // Check that service workers are registered
-        if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
+{{--    <script>--}}
+{{--        // Check that service workers are registered--}}
+{{--        if ('serviceWorker' in navigator) {--}}
+{{--            // Use the window load event to keep the page load performant--}}
+{{--            window.addEventListener('load', () => {--}}
+{{--                navigator.serviceWorker.register('/sw.js');--}}
+{{--            });--}}
+{{--        }--}}
 
-        let deferredPrompt;
+{{--        let deferredPrompt;--}}
 
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-        });
-    </script>
+{{--        window.addEventListener('beforeinstallprompt', (e) => {--}}
+{{--            e.preventDefault();--}}
+{{--            deferredPrompt = e;--}}
+{{--        });--}}
+{{--    </script>--}}
 
     <link rel="manifest" href="{{ asset('manifest.json') }}">
 </head>
