@@ -194,14 +194,14 @@
                 @endif
             @endforeach
         @else
-            <h6 class="mt-4 mb-2 text-opacity-25 text-white text-center">
+            <div class="mt-4 mb-2 text-opacity-25 text-white text-center">
                 <div class="card text-white bg-darker">
                     <div class="card-body d-flex align-items-center">
                         <i class="bi bi-info-circle text-primary fs-5 me-2"></i>
                         <p class="m-0">Nessuna transazione trovata</p>
                     </div>
                 </div>
-            </h6>
+            </div>
         @endunless
     </div>
     <script>

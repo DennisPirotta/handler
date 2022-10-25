@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container shadow-sm p-3 bg-dark">
+    <div class="container p-3 bg-dark">
         <div class="accordion accordion-borderless" id="accordionFlushExampleX">
             <div class="accordion-item bg-darker">
                 <h2 class="accordion-header" id="flush-headingOneX">
@@ -31,11 +31,24 @@
             <button class="btn btn-dark me-3 bg-darker" onclick="sortBy('desc')"><i class="bi bi-arrow-down"></i></button>
             <button class="btn btn-dark bg-darker" onclick="sortBy('asc')"><i class="bi bi-arrow-up"></i></button>
         </div>
-
         <div id="customer-cards-container">
-            @foreach($customers->reverse() as $customer)
-                <x-customer-card :customer="$customer"></x-customer-card>
-            @endforeach
+            @unless($customers->isNotEmpty())
+                <div class="mt-4 mb-2 text-opacity-25 text-white text-center">
+                    <div class="card text-white bg-darker">
+                        <div class="card-body d-flex align-items-center">
+                            <i class="bi bi-info-circle text-primary fs-5 me-2"></i>
+                            <p class="m-0">Nessun cliente trovato</p>
+                        </div>
+                    </div>
+                </div>
+            @else
+                <div class="mt-3">
+                    @foreach($customers->reverse() as $customer)
+                        <x-customer-card :customer="$customer"></x-customer-card>
+                    @endforeach
+                </div>
+
+            @endunless
         </div>
 
     </div>
