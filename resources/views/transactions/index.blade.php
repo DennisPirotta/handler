@@ -5,10 +5,8 @@
 @extends('layouts.app')
 @section('content')
     {{-- <x-toast :message="'Hello world! This is a toast message.'" :icon="'fa-info-circle'"></x-toast> --}}
-    <div class="container shadow-sm p-3 bg-dark">
-
+    <div class="container p-3 bg-dark">
         <div class="accordion accordion-borderless" id="accordionFlushExampleX">
-
 
             <div class="accordion-item bg-darker">
                 <h2 class="accordion-header" id="flush-headingOneX">
@@ -197,7 +195,12 @@
             @endforeach
         @else
             <h6 class="mt-4 mb-2 text-opacity-25 text-white text-center">
-                Nessuna transazione trovata
+                <div class="card text-white bg-darker">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="bi bi-info-circle text-primary fs-5 me-2"></i>
+                        <p class="m-0">Nessuna transazione trovata</p>
+                    </div>
+                </div>
             </h6>
         @endunless
     </div>
