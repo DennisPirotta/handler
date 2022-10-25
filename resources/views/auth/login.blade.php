@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container shadow-sm bg-dark rounded-5 p-3 mt-n3 text-center text-white animate__animated animate__fadeIn justify-content-center">
+    <div class="container bg-dark rounded-5 p-3 mt-n3 text-center text-white animate__animated animate__fadeIn justify-content-center">
         <div class="row align-items-center">
             <div class="col-12 col-md-6">
                 <lottie-player src="{{ asset('images/lottie/login.json') }}"  background="transparent"  speed="1"   loop autoplay></lottie-player>
