@@ -20,3 +20,18 @@ jobs:
         with:
           php-version: 8.1
           extensions: mbstring, ctype, fileinfo, openssl, PDO, bcmath, json, tokenizer, xml
+
+      - name: Install composer dependencies
+        run:
+          composer install --no-dev --no-interaction --prefer-dist
+
+      - name: Create deployment artifacts
+        env:
+          GITHUB_SHA: ${{ github.sha }}
+        run: tar -czf "${GITHUB_SHA}".tar.gz --exclude=*.git --exclude=node_modules *
+
+      - name: Store artifacts for distribution
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-build
+          path: ${{ github.sha }}.tar.gz
